@@ -10,4 +10,11 @@ services:
       MYSQL_PASSWORD: symfony
     ports:
       - '3306:3306'
-   
+  php:
+    container_name: php
+    build:
+      context: ./docker
+    ports:
+      - '80:80'
+    depends_on:
+      - database  
