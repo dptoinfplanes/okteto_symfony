@@ -30,13 +30,13 @@ RUN php /usr/bin/composer install
 #RUN  composer require symfony/apache-pack
 
 # Copies your code to the image
-COPY /apache/apache2.conf /etc/apache2
+COPY ./apache/apache2.conf /etc/apache2
 
 # Copies your code to the image
-COPY /site /var/www/html
+COPY ./site /var/www/html
 
 
-EXPOSE $PORT
+EXPOSE 80
 #CMD [“apache2ctl”, “-D”, “FOREGROUND”]
 
 
