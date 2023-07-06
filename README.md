@@ -1,3 +1,12 @@
+#instalacion de symfony con docker compose
+https://www.twilio.com/blog/get-started-docker-symfony
+
+
+
+
+
+
+
 # railway_apache
 # Instalacion Composer y generacion vendor
 
