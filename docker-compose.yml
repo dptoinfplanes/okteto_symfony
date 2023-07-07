@@ -1,7 +1,23 @@
 services:
+  services:
+  database:
+    container_name: database
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: symfony_docker
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    ports:
+      - '3306:3306'
   php:
     container_name: php
     build:
       context: ./docker
     ports:
       - '80:80'
+    depends_on:
+      - database     
+    links:
+      - dbdatabase     
